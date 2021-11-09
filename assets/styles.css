@@ -37,7 +37,13 @@ h1 {
 .tooltip-copy {
   position: absolute;
   top: 1rem;
-  right: 2rem;
+  right: 1rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .tooltip-copy {
+    right: 2rem;
+  } 
 }
 
 /* Tooltip Copy */
