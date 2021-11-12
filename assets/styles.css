@@ -4,6 +4,10 @@ body {
   font-family: 'Fira Sans', sans-serif;
 }
 
+::-webkit-scrollbar {
+  cursor: pointer !important;
+}
+
 .navbar-brand svg {
   margin-top: -5px;
   margin-right: 2px;
@@ -28,7 +32,23 @@ h1 {
 }
 
 #list.form-control::-webkit-scrollbar {
-  width: 0.5rem;
+  background: #e9ecef;
+  width: 10px;
+  cursor: pointer !important;
+}
+
+#list.form-control::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.25);
+  border: 4px solid #e9ecef;
+  background-clip: content-box;
+  cursor: pointer !important;
+}
+
+#list.form-control::-webkit-scrollbar-thumb {
+  height: 60px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  cursor: pointer !important;
 }
 
 #submit-domain-input {
@@ -37,6 +57,12 @@ h1 {
 
 .disposable-emails-list {
   position: relative;
+}
+
+/* Tooltip Copy */
+
+.tooltip-copy .btn-copy {
+  border-right-color: transparent;
 }
 
 .tooltip-copy {
@@ -50,8 +76,6 @@ h1 {
     right: 2rem;
   } 
 }
-
-/* Tooltip Copy */
 
 .tooltip-copy .tooltiptext {
   visibility: hidden;
