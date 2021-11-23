@@ -26,9 +26,9 @@ h1 {
 }
 
 #list.form-control {
-  width: 100%;
-  min-height: 480px;
-  scrollbar-width: thin;
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
 }
 
 #list.form-control::-webkit-scrollbar {
@@ -57,6 +57,31 @@ h1 {
 
 .disposable-emails-list {
   position: relative;
+}
+
+#search-query.form-control:focus {
+  box-shadow: none;
+}
+
+#domains-list {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-height: 480px;
+  padding: 1rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  background-color: #e9ecef;
+  scrollbar-width: thin;
+}
+
+#domains-list ul {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.not-found {
+  display: none;
 }
 
 /* Tooltip Copy */

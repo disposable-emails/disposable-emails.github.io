@@ -88,7 +88,14 @@
 					</p>
 				  </div>
 				</div>
+				<div class="search-container">
+					<div class="input-group mb-3 position-relative">
+					  <span class="input-group-text" id="search-addon">Search domain</span>
+					  <input type="text" class="form-control" id="search-query" value="" placeholder="i.e. domain.com" aria-label="domain.com" aria-describedby="search-addon">
+					</div>
+				</div>
 				<div class="disposable-emails-list">
+					<div id="domains-list"></div>
 					<textarea id="list" class="form-control" readonly></textarea>
 					<div class="tooltip-copy">
 						<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
