@@ -20,7 +20,7 @@ jQuery(document).ready(function () {
 	});
 	// Search in list
 	$('input#search-query').on('keyup submit', function () {
-		if ($(this).val().trim().length !== 0) {
+		if ($(this).val().trim().toLowerCase().length !== 0) {
 			$('#domains-list li').show().hide().each(function () {
 				if ($(this).is(':contains(' + $('input#search-query').val() + ')')) {
 					$('.not-found').hide();
