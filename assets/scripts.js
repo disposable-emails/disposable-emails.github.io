@@ -1,4 +1,4 @@
-// Diposable Emails @ disposable-emails.github.io
+//// Diposable Emails @ disposable-emails.github.io
 
 jQuery(document).ready(function () {
 	// Load list
@@ -20,9 +20,9 @@ jQuery(document).ready(function () {
 	});
 	// Search in list
 	$('input#search-query').on('keyup submit', function () {
-		if ($(this).val().trim().toLowerCase().length !== 0) {
+		if ($(this).val().trim().length !== 0) {
 			$('#domains-list li').show().hide().each(function () {
-				if ($(this).is(':contains(' + $('input#search-query').val() + ')')) {
+				if ($(this).is(':contains(' + $('input#search-query').val().toLowerCase() + ')')) {
 					$('.not-found').hide();
 					$(this).show();
 				} else {
@@ -51,8 +51,8 @@ function copyList() {
 	navigator.clipboard.writeText(copyText.value);
 	var tooltip = document.getElementById("copy-tooltip");
 	tooltip.innerHTML = "Copied to clipboard";
- }
- 
+}
+
 function outCopy() {
 	var tooltip = document.getElementById("copy-tooltip");
 	tooltip.innerHTML = "Copy to clipboard";
